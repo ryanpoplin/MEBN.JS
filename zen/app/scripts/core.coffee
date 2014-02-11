@@ -2,6 +2,9 @@
 
 # Tenuous, I/0, Volume, Shape, Scale, Risk Following Growth, Concurrency Control...
 
+###
+###
+
 # The program...
 
 EventEmitter = require('events').EventEmitter
@@ -27,3 +30,33 @@ counter.on 'incremented', callback
 
 counter.increment()
 counter.increment()
+counter.removeListener('incremented', callback)
+counter.increment()
+
+###
+###
+
+Readable = require('stream').Readable
+
+readable = new Readable()
+
+count = 0
+
+readable._read = ->
+	if ++count > 10
+		readable.push null
+	setTimeout ->
+		readable.push count + '\n'
+		@
+	, 500
+	console.log readable.pipe process.stdout
+	@
+
+readable._read()
+
+###
+###
+
+
+
+
