@@ -58,8 +58,6 @@
     return this;
   };
 
-  readable._read();
-
 
   /*
    */

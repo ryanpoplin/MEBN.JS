@@ -52,7 +52,7 @@ readable._read = ->
 	console.log readable.pipe process.stdout
 	@
 
-readable._read()
+# readable._read()
 
 ###
 ###
