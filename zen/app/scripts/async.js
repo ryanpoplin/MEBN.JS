@@ -39,4 +39,23 @@
     }
   })();
 
+
+  /*
+   */
+
+  (function() {
+    console.log("Ready to be badass!");
+  })();
+
+
+  /*
+   */
+
+  (function() {
+    var obj;
+    obj = void 0;
+    obj = Object.create(null);
+    console.log(obj);
+  })();
+
 }).call(this);

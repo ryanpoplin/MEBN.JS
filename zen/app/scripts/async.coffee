@@ -29,3 +29,17 @@ console.log 'str'.constructor.name
   continue  while new Date() - start < 1000
   return
 )()
+###
+###
+(->
+  console.log "Ready to be badass!"
+  return
+)()
+###
+###
+(->
+  obj = undefined
+  obj = Object.create(null)
+  console.log obj
+  return
+)()
